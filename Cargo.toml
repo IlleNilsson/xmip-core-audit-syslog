@@ -13,7 +13,10 @@ publish = false
 [lib]
 path = "src/lib.rs"
 
-[dependencies]
+# Every dependency is Unix's alone: on any other platform the crate is empty,
+# and cargo refuses a dependency a build does not use (unused_dependencies,
+# Cargo 1.100).
+[target.'cfg(unix)'.dependencies]
 # A Technology depends on its parent Capability, never the reverse
 # (repository-model.md): the operating system's log is audit's seam, and
 # the entry's text audit's.
