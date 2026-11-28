@@ -17,9 +17,9 @@ path = "src/lib.rs"
 # A Technology depends on its parent Capability, never the reverse
 # (repository-model.md): the operating system's log is audit's seam, and
 # the entry's text audit's.
-audit = { package = "xmip-core-audit", git = "https://github.com/IlleNilsson/xmip-core-audit", branch = "main" }
+audit = { workspace = true }
 # The severity an entry is written at.
-xcore = { package = "xmip-core", git = "https://github.com/IlleNilsson/xmip-core", branch = "main" }
+xcore = { workspace = true }
 
 [lints]
 workspace = true
